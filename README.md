@@ -6,13 +6,15 @@ A Docker image with the ConnectIQ tools. It does not support the simulator due t
 
 This docker image contain all tools for interacting with the Garmin ConnectIQ toolset
 
+`docker run -it ghcr.io/blackshadev/garmin-connectiq-tools:1.0.0`
+
 ### Releasing
 
-`monkeyc -e -r -w -o $OUTPUT -f $PROJECT -y $DEVELOPER_KEY`
+`java -jar /connectiq/bin/monkeybrains.jar -e -r -w -o $OUTPUT -f $PROJECT -y $DEVELOPER_KEY`
 
 ### Compiling / Checking
 
-`monkeyc -f $PROJECT -d $DEVICE -o $OUTPUT -y $DEVELOPER_KEY -l $TYPE_CHECK_LEVEL`
+`java -jar /connectiq/bin/monkeybrains.jar -f $PROJECT -d $DEVICE -o $OUTPUT -y $DEVELOPER_KEY -l $TYPE_CHECK_LEVEL`
 
 ## Updating
 
