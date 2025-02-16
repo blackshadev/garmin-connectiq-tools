@@ -10,13 +10,14 @@ RUN apk -U --no-cache add \
 
 ENV CONNECT_IQ_VERSION=7.4.3
 ENV CONNECT_IQ_HOME=/connectiq
-RUN mkdir -p /connectiq /connectiq-devices
 
 # Download SDK
 COPY downloader.sh /root/downloader.sh
 RUN /root/downloader.sh
 
 FROM alpine:3.21 AS installer_devices
+
+RUN mkdir -p /connectiq /connectiq-devices
 
 # Copy devices from local
 COPY devices.tar.gz /tmp/devices.tar.gz
