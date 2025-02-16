@@ -32,8 +32,6 @@ COPY --from=installer_sdk /connectiq ${CONNECT_IQ_HOME}
 RUN mkdir -p /root/.Garmin/ConnectIQ/Devices
 COPY --from=installer_devices /connectiq-devices /root/.Garmin/ConnectIQ/Devices
 
-COPY releaser.sh ${CONNECT_IQ_HOME}/bin/
-
 RUN apk -U --no-cache add \
 	openjdk17-jre-headless
 
