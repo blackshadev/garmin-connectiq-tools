@@ -34,6 +34,7 @@ RUN mkdir -p /root/.Garmin/ConnectIQ/Devices
 COPY --from=installer_devices /connectiq-devices /root/.Garmin/ConnectIQ/Devices
 
 RUN apk -U --no-cache add \
-	openjdk17-jre-headless
+	openjdk17-jre-headless \
+    fontconfig ttf-dejavu
 
 ENTRYPOINT [ "/bin/sh" ]
