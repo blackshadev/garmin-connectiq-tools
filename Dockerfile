@@ -38,3 +38,4 @@ RUN apk -U --no-cache add \
     fontconfig ttf-dejavu
 
 ENTRYPOINT [ "/bin/sh" ]
+
