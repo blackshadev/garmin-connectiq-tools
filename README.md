@@ -6,7 +6,7 @@ A Docker image with the ConnectIQ tools. It does not support the simulator due t
 
 This docker image contain all tools for interacting with the Garmin ConnectIQ toolset
 
-`docker run -it ghcr.io/blackshadev/garmin-connectiq-tools:8.2.3`
+`docker run -it ghcr.io/blackshadev/garmin-connectiq-tools:8.2.3-1`
 
 ### Releasing
 
