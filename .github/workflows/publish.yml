@@ -40,3 +40,23 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+      
+      - name: Update builder repo
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.PAT }}
+          repository: blackshadev/garmin-connectiq-build-action
+          event-type: update
+          client-payload: '{"version":"${{ github.ref_name }}"}'
+
+      
+      - name: Update release repo
+        uses: peter-evans/repository-dispatch@v4
+        with:
+          token: ${{ secrets.PAT }}
+          repository: blackshadev/garmin-connectiq-release-action
+          event-type: update
+          client-payload: '{"version":"${{ github.ref_name }}"}'
+      
+      
+      
