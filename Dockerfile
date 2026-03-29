@@ -8,7 +8,7 @@ RUN apk -U --no-cache add \
     unzip \
     tar
 
-ENV CONNECT_IQ_VERSION=8.4.0
+ENV CONNECT_IQ_VERSION=9.1.0
 ENV CONNECT_IQ_HOME=/connectiq
 
 # Download SDK
